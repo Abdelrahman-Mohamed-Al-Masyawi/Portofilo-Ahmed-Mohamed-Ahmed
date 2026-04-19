@@ -39,7 +39,8 @@ const resources = {
         list: [
           'Financial Reporting',
           'Accounting Systems',
-          'Microsoft Office (Excel Advanced)',
+          'Microsoft Office ',
+          'Excel Advanced  ',
           'Tax & Zakat Preparation',
           'Supplier & Customer Account Management',
           'Financial Statement Preparation',
@@ -129,7 +130,7 @@ const resources = {
         marital: 'متزوج',
         dob: '4/7/1991',
         license: 'رخصة قيادة سارية',
-        cv:"تحميل السيرة الذاتية"
+        cv: 'تحميل السيرة الذاتية',
       },
       // Objective
       objective: {
@@ -141,7 +142,8 @@ const resources = {
         list: [
           'التقارير المالية',
           'النظم المحاسبية',
-          'مايكروسوفت أوفيس (إكسل متقدم)',
+          'مايكروسوفت أوفيس ',
+          ' أكسل متقدم ',
           'إعداد الضرائب والزكاة',
           'إدارة حسابات الموردين والعملاء',
           'إعداد القوائم المالية',

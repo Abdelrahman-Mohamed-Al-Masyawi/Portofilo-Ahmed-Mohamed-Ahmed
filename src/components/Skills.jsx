@@ -7,16 +7,18 @@ import {
   FaMicrosoft, 
   FaMoneyBillWave, 
   FaUsers, 
-  FaFileInvoice 
+  FaFileInvoice, 
+  FaFileExcel,
+  
 } from 'react-icons/fa';
 
 const Skills = () => {
   const { t } = useTranslation();
   
   const skillsList = t('skills.list', { returnObjects: true });
-  const icons = [FaChartLine, FaDatabase, FaMicrosoft, FaMoneyBillWave, FaUsers, FaFileInvoice];
+  const icons = [FaChartLine, FaDatabase, FaMicrosoft, FaFileExcel, FaMoneyBillWave, FaUsers, FaFileInvoice];
   
-  const skillLevels = [95, 90, 98, 92, 88, 96];
+  const skillLevels = [95, 90, 98,85, 92, 88, 96];
 
   return (
     <section id="skills" className="section">
