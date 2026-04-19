@@ -11,9 +11,9 @@ const Certificates = () => {
   const { t } = useTranslation();
   
   const certificates = [
-    { id: 1, name: t('certificates.cert1'), image: '/public/img109.jpg' },
-    { id: 2, name: t('certificates.cert2'), image: '/public/img115.jpg' },
-    { id: 3, name: t('certificates.cert3'), image: '/public/img118.jpg' }
+    { id: 1, name: t('certificates.cert1'), image: '/img109.jpg' },
+    { id: 2, name: t('certificates.cert2'), image: '/img115.jpg' },
+    { id: 3, name: t('certificates.cert3'), image: '/img118.jpg' }
   ];
 
   return (

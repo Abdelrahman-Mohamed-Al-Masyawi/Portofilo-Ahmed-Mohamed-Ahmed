@@ -11,7 +11,7 @@ const Hero = () => {
         <div className='hero-wrapper'>
           {/* 👇 IMAGE SIDE */}
           <div className='hero-image'>
-            <img src='/public/abo hamza.jpeg' alt='profile' />
+            <img src='/abo hamza.jpeg' alt='profile' />
           </div>
 
           {/* 👇 TEXT SIDE */}
