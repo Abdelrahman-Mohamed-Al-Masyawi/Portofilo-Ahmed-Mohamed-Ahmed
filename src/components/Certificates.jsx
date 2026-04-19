@@ -11,9 +11,9 @@ const Certificates = () => {
   const { t } = useTranslation();
   
   const certificates = [
-    { id: 1, name: t('certificates.cert1'), image: 'https://placehold.co/600x400/0B3C5D/white?text=Advanced+Accounting' },
-    { id: 2, name: t('certificates.cert2'), image: 'https://placehold.co/600x400/0B3C5D/white?text=Tax+%26+Zakat+Professional' },
-    { id: 3, name: t('certificates.cert3'), image: 'https://placehold.co/600x400/0B3C5D/white?text=Financial+Analysis+Expert' }
+    { id: 1, name: t('certificates.cert1'), image: '/public/imgs/background/img109.jpg' },
+    { id: 2, name: t('certificates.cert2'), image: '/public/imgs/background/img115.jpg' },
+    { id: 3, name: t('certificates.cert3'), image: '/public/imgs/background/img118.jpg' }
   ];
 
   return (

@@ -1,11 +1,24 @@
-// src/components/Navbar.js
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React from 'react';
+import {
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 
-const Navbar = ({ toggleLanguage, toggleTheme, currentLang, isDark }) => {
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from 'react-i18next';
+
+export default function Navbar({ toggleLanguage, toggleTheme, currentLang, isDark }) {
   const { t } = useTranslation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
 
   const navItems = ['home', 'objective', 'skills', 'experience', 'education', 'certificates', 'contact'];
 
@@ -13,46 +26,72 @@ const Navbar = ({ toggleLanguage, toggleTheme, currentLang, isDark }) => {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+      setOpen(false);
     }
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <div className="logo">
-          <h1>Ahmed Elsayed</h1>
-          <p>Professional Accountant</p>
-        </div>
-        
-        <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-        
-        <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-          {navItems.map((item) => (
-            <li key={item}>
-              <a href={`#${item}`} onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(item);
-              }}>
-                {t(`nav.${item}`)}
-              </a>
-            </li>
-          ))}
-        </ul>
-        
-        <div className="nav-controls">
-          <button className="lang-toggle" onClick={toggleLanguage}>
-            {currentLang === 'en' ? 'عربي' : 'English'}
-          </button>
-          <button className="theme-toggle" onClick={toggleTheme}>
-            {isDark ? '☀️' : '🌙'}
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};
+    <>
+      {/* NAVBAR */}
+      <AppBar
+        sx={{
+          background: isDark ? '#0f172a' : '#ffffff',
+          color: isDark ? '#fff' : '#000',
+        }}
+        position='sticky'>
+        <Toolbar>
+          {/* Logo */}
+          <Typography variant='h6' sx={{ flexGrow: 1 }}>
+            Ahmed El-Sayed
+          </Typography>
 
-export default Navbar;
+          {/* Menu Button */}
+          <IconButton color='inherit' onClick={() => setOpen(true)}>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      {/* SIDEBAR */}
+      <Drawer anchor='right' open={open} onClose={() => setOpen(false)}>
+        <Box sx={{ width: 270, height: '100%', display: 'flex', flexDirection: 'column' }}>
+          {/* HEADER (Close Button) */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              p: 2,
+              borderBottom: '1px solid #eee',
+            }}>
+            <Typography fontWeight='bold'>Menu</Typography>
+
+            <IconButton onClick={() => setOpen(false)}>
+              <CloseIcon />
+            </IconButton>
+          </Box>
+
+          {/* NAV ITEMS */}
+          <List>
+            {navItems.map((item) => (
+              <ListItem button key={item} onClick={() => handleNavClick(item)}>
+                <ListItemText primary={t(`nav.${item}`)} />
+              </ListItem>
+            ))}
+          </List>
+
+          {/* CONTROLS */}
+          <Box sx={{ mt: 'auto', p: 2, display: 'flex', flexDirection: 'column', gap: 1 }}>
+            <Button fullWidth variant='contained' onClick={toggleLanguage}>
+              {currentLang === 'en' ? 'Arabic' : 'English'}
+            </Button>
+
+            <Button fullWidth variant='outlined' onClick={toggleTheme}>
+              {isDark ? '☀ Light Mode' : '🌙 Dark Mode'}
+            </Button>
+          </Box>
+        </Box>
+      </Drawer>
+    </>
+  );
+}

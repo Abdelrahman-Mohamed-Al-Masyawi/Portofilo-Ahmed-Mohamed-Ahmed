@@ -14,7 +14,7 @@ const resources = {
         experience: 'Experience',
         education: 'Education',
         certificates: 'Certificates',
-        contact: 'Contact'
+        contact: 'Contact',
       },
       // Hero
       hero: {
@@ -26,11 +26,12 @@ const resources = {
         nationality: 'Egyptian',
         marital: 'Married',
         dob: '4/7/1991',
-        license: 'Valid Driver License'
+        license: 'Valid Driver License',
+        cv: 'Download CV',
       },
       // Objective
       objective: {
-        text: 'Facing challenges and achieving the highest level of professional work by joining a team that develops administrative skills and obtaining more advanced levels'
+        text: 'Facing challenges and achieving the highest level of professional work by joining a team that develops administrative skills and obtaining more advanced levels',
       },
       // Skills
       skills: {
@@ -41,8 +42,8 @@ const resources = {
           'Microsoft Office (Excel Advanced)',
           'Tax & Zakat Preparation',
           'Supplier & Customer Account Management',
-          'Financial Statement Preparation'
-        ]
+          'Financial Statement Preparation',
+        ],
       },
       // Experience
       experience: {
@@ -57,8 +58,8 @@ const resources = {
               'Recording daily journal entries',
               'Preparing financial statements',
               'Tax and Zakat reports',
-              'Inventory control and stock management'
-            ]
+              'Inventory control and stock management',
+            ],
           },
           {
             title: 'Accountant - Farm Company',
@@ -67,24 +68,24 @@ const resources = {
             responsibilities: [
               'Same accounting responsibilities',
               'Financial reporting',
-              'Account tracking and reconciliation'
-            ]
-          }
-        ]
+              'Account tracking and reconciliation',
+            ],
+          },
+        ],
       },
       // Education
       education: {
         title: 'Education',
         degree: 'Bachelor of Commerce',
         university: 'Beni Suef University',
-        department: 'Accounting & Auditing Department'
+        department: 'Accounting & Auditing Department',
       },
       // Certificates
       certificates: {
         title: 'Professional Certificates',
-        cert1: 'Advanced Accounting Certificate',
-        cert2: 'Tax & Zakat Professional',
-        cert3: 'Financial Analysis Expert'
+        cert1: ' Accounting & Auditing Masterclass ',
+        cert2: 'ICDL',
+        cert3: 'Cours English',
       },
       // Contact
       contact: {
@@ -92,18 +93,18 @@ const resources = {
         phone: 'Call Me',
         whatsapp: 'WhatsApp',
         email: 'Send Email',
-        location: 'Riyadh, Saudi Arabia'
+        location: 'Riyadh, Saudi Arabia',
       },
       // Languages
       languages: {
         title: 'Languages',
         arabic: 'Arabic (Native)',
-        english: 'English (Good)'
+        english: 'English (Good)',
       },
       footer: {
-        text: '© 2024 Ahmed Elsayed - Professional Accountant. All rights reserved.'
-      }
-    }
+        text: '© 2024 Ahmed Elsayed - Professional Accountant. All rights reserved.',
+      },
+    },
   },
   ar: {
     translation: {
@@ -115,7 +116,7 @@ const resources = {
         experience: 'الخبرات',
         education: 'التعليم',
         certificates: 'الشهادات',
-        contact: 'اتصل بي'
+        contact: 'اتصل بي',
       },
       // Hero
       hero: {
@@ -127,11 +128,12 @@ const resources = {
         nationality: 'مصري',
         marital: 'متزوج',
         dob: '4/7/1991',
-        license: 'رخصة قيادة سارية'
+        license: 'رخصة قيادة سارية',
+        cv:"تحميل السيرة الذاتية"
       },
       // Objective
       objective: {
-        text: 'تحديات اجتياز وتحقيق أجل من وذلك المستوى وعالي احترافي عمل فريق إلى الانضمام وتطوير المهارات الإدارية والحصول على المزيد من المستويات'
+        text: 'تحديات اجتياز وتحقيق أجل من وذلك المستوى وعالي احترافي عمل فريق إلى الانضمام وتطوير المهارات الإدارية والحصول على المزيد من المستويات',
       },
       // Skills
       skills: {
@@ -142,8 +144,8 @@ const resources = {
           'مايكروسوفت أوفيس (إكسل متقدم)',
           'إعداد الضرائب والزكاة',
           'إدارة حسابات الموردين والعملاء',
-          'إعداد القوائم المالية'
-        ]
+          'إعداد القوائم المالية',
+        ],
       },
       // Experience
       experience: {
@@ -158,34 +160,30 @@ const resources = {
               'تسجيل القيود اليومية',
               'إعداد القوائم المالية',
               'تقارير الضرائب والزكاة',
-              'مراقبة المخزون وإدارة المخزون'
-            ]
+              'مراقبة المخزون وإدارة المخزون',
+            ],
           },
           {
             title: 'محاسب - شركة فارم',
             location: 'المملكة العربية السعودية',
             period: '2025 - 2026',
-            responsibilities: [
-              'نفس المسؤوليات المحاسبية',
-              'التقارير المالية',
-              'تتبع الحسابات والتسويات'
-            ]
-          }
-        ]
+            responsibilities: ['نفس المسؤوليات المحاسبية', 'التقارير المالية', 'تتبع الحسابات والتسويات'],
+          },
+        ],
       },
       // Education
       education: {
         title: 'التعليم',
         degree: 'بكالوريوس التجارة',
         university: 'جامعة بني سويف',
-        department: 'قسم المحاسبة والمراجعة'
+        department: 'قسم المحاسبة والمراجعة',
       },
       // Certificates
       certificates: {
         title: 'الشهادات المهنية',
-        cert1: 'شهادة المحاسبة المتقدمة',
-        cert2: 'احتراف الضرائب والزكاة',
-        cert3: 'خبير التحليل المالي'
+        cert1: 'شهادة المحاسبة والمراجعة',
+        cert2: ' الرخصة الدولية لقيادة الحاسب الالي',
+        cert3: 'دورة في اللغة الانجليزية',
       },
       // Contact
       contact: {
@@ -193,19 +191,19 @@ const resources = {
         phone: 'اتصل بي',
         whatsapp: 'واتساب',
         email: 'أرسل بريداً',
-        location: 'الرياض، المملكة العربية السعودية'
+        location: 'الرياض، المملكة العربية السعودية',
       },
       // Languages
       languages: {
         title: 'اللغات',
         arabic: 'العربية (لغة أم)',
-        english: 'الإنجليزية (جيد)'
+        english: 'الإنجليزية (جيد)',
       },
       footer: {
-        text: '© ٢٠٢٤ أحمد السيد - محاسب محترف. جميع الحقوق محفوظة'
-      }
-    }
-  }
+        text: '© ٢٠٢٤ أحمد السيد - محاسب محترف. جميع الحقوق محفوظة',
+      },
+    },
+  },
 };
 
 i18n

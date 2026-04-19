@@ -1,0 +1,132 @@
+
+/* Hero */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), #1a5a7a);
+  color: white;
+  padding: 80px 20px;
+}
+
+/* container */
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* ====== MAIN LAYOUT ====== */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* ====== IMAGE ====== */
+.hero-image {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;        /* 👈 صغيرة زي ما طلبت */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ====== TEXT ====== */
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.hero-title {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+.cv-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+/* ====== INFO GRID ====== */
+.hero-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 توزيع احترافي */
+  gap: 0.8rem;
+}
+
+.hero-info span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.hero-info span:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.2);
+}
+
+/* ====== 💻 RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .hero-wrapper {
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-info {
+    grid-template-columns: 1fr; /* عمود واحد */
+  }
+}
+
+/* ====== 📱 MOBILE ====== */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    flex: unset;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-info {
+    grid-template-columns: 1fr;
+  }
+}
