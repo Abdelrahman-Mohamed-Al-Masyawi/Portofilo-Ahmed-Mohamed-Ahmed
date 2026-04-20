@@ -23,11 +23,18 @@ export default function Navbar({ toggleLanguage, toggleTheme, currentLang, isDar
   const navItems = ['home', 'objective', 'skills', 'experience', 'education', 'certificates', 'contact'];
 
   const handleNavClick = (section) => {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setOpen(false);
-    }
+    setOpen(false);
+
+    setTimeout(() => {
+      const element = document.getElementById(section);
+
+      if (element) {
+        const yOffset = -80; // ارتفاع النافبار
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 300); // 🔥 مهم جدًا مع Material UI
   };
 
   return (
@@ -42,7 +49,7 @@ export default function Navbar({ toggleLanguage, toggleTheme, currentLang, isDar
         <Toolbar>
           {/* Logo */}
           <Typography variant='h6' sx={{ flexGrow: 1 }}>
-            Ahmed El-Sayed
+           {t( "nav.name")}
           </Typography>
 
           {/* Menu Button */}
@@ -74,7 +81,7 @@ export default function Navbar({ toggleLanguage, toggleTheme, currentLang, isDar
           {/* NAV ITEMS */}
           <List>
             {navItems.map((item) => (
-              <ListItem button key={item} onClick={() => handleNavClick(item)}>
+              <ListItem style={{cursor:"pointer"}} button key={item} onClick={() => handleNavClick(item)}>
                 <ListItemText primary={t(`nav.${item}`)} />
               </ListItem>
             ))}

@@ -1,0 +1,80 @@
+
+/* Swiper Styles */
+.swiper {
+  padding: 2rem 0 !important;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cert-card .cert-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cert-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--accent) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent) !important;
+}
+
+
+
+
+.cert-card img {
+  width: 100%;
+  height: 300px; /* 🔥 كبر الطول */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* أزرار تحت */
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.slider-buttons button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-buttons button:hover {
+  background: #ff5722;
+}
+

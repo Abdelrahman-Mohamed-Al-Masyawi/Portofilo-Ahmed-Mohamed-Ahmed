@@ -15,6 +15,7 @@ const resources = {
         education: 'Education',
         certificates: 'Certificates',
         contact: 'Contact',
+        name: 'Ahmed El-Sayed',
       },
       // Hero
       hero: {
@@ -118,6 +119,7 @@ const resources = {
         education: 'التعليم',
         certificates: 'الشهادات',
         contact: 'اتصل بي',
+        name:"أحمد السيد "
       },
       // Hero
       hero: {

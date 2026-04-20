@@ -41,7 +41,7 @@ const Hero = () => {
               <span>
                 <FaIdCardAlt /> {t('hero.license')}
               </span>
-              <a href='/CV AHMED-.pdf' download className='cv-btn'>
+              <a href='/Cv.pdf' download className='cv-btn'>
                 {t('hero.cv')}
               </a>
             </div>
